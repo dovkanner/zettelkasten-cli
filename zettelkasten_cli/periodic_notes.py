@@ -13,10 +13,10 @@ TODAY = format_date()
 YESTERDAY = format_date(-1)
 TOMORROW = format_date(1)
 CONFIG_PATH = Path(os.environ.get("XDG_CONFIG_HOME", ""))
-DAILY_NOTES_PATH = ZETTELKASTEN_ROOT / "periodic-notes" / "daily-notes"
-DAILY_NOTES_TEMPLATE_PATH = CONFIG_PATH / "zk" / "daily.md"
+DAILY_NOTES_PATH = ZETTELKASTEN_ROOT / "2!" / "daily-notes"
+DAILY_NOTES_TEMPLATE_PATH = ZETTELKASTEN_ROOT / "x" / "templates" / "Daily.md"
 TODAY_NOTE_PATH = DAILY_NOTES_PATH / f"{TODAY}.md"
-WEEKLY_NOTES_PATH = ZETTELKASTEN_ROOT / "periodic-notes" / "weekly-notes"
+WEEKLY_NOTES_PATH = ZETTELKASTEN_ROOT / "2!" / "weekly-notes"
 
 
 def format_daily_note_content() -> str:
