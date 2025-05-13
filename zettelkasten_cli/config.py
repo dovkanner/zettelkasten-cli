@@ -19,4 +19,7 @@ NVIM_ARGS = os.environ.get("ZETTELKASTEN_NVIM_ARGS") or "+ normal Gzzo"
 
 # Only use default commands if environment variable is not set
 nvim_cmds = os.environ.get("ZETTELKASTEN_NVIM_COMMANDS")
-NVIM_COMMANDS = nvim_cmds.split(",") if nvim_cmds else [":NoNeckPain"]
+if not nvim_cmds:
+    raise EnvironmentError("ZETTELKASTEN_NVIM_COMMANDS is not set.")
+NVIM_COMMANDS = nvim_cmds.split(",")
+
